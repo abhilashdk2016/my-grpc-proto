@@ -5,6 +5,7 @@ package bank;
 import "proto/bank/type/account.proto";
 import "proto/bank/type/exchange.proto";
 import "proto/bank/type/transaction.proto";
+import "proto/bank/type/transfer.proto";
 
 option go_package = "github.com/abhilashdk2016/my-grpc-proto/protogen/go/bank-proto";
 
@@ -12,4 +13,5 @@ service BankService {
     rpc GetCurrentBalance(CurrentBalanceRequest) returns (CurrentBalanceResponse) { }
     rpc FetchExchangeRates(ExchangeRateRequest) returns (stream ExchangeRateResponse) { }
     rpc SummarizeTransactions(stream Transaction) returns (TransactionSummary) { }
+    rpc TransferMultiple(stream TransferRequest) returns (stream TransferResponse) { }
 }

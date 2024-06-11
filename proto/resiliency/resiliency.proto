@@ -7,7 +7,7 @@ option go_package = "github.com/abhilashdk2016/my-grpc-proto/protogen/go/resilie
 message ResiliencyRequest {
     int32 min_delay_second = 1 [json_name = "min_delay_second"];
     int32 max_delay_second = 2 [json_name = "max_delay_second"];
-    repeated uint32 status_codes = 2 [json_name = "status_codes"];
+    repeated uint32 status_codes = 3 [json_name = "status_codes"];
 }
 
 message ResiliencyResponse {
